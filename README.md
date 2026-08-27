@@ -1,16 +1,110 @@
-# React + Vite
+# MediaLoom
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+MediaLoom is a modern media rating and tracking application built with React and Vite. It allows users to organize, rate, review, and manage their favorite movies, books, TV series, and anime in one place.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* 🎬 Track movies
+* 📚 Track books
+* 📺 Track TV series
+* 🎌 Track anime
+* ⭐ Rate media from 1–5 stars
+* 📝 Add personal notes and reviews
+* 🔎 Search and filter ratings
+* 📊 View statistics and reports
+* ❤️ Manage favourites
+* 🕒 View rating history
+* ✏️ Edit existing ratings
+* 📈 Dashboard with rating analytics
+* ⚙️ Application settings
+* 📱 Responsive interface
 
-## React Compiler
+## Technologies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React
+* Vite
+* JavaScript
+* HTML5
+* CSS3
+* Context API
+* ESLint/Oxlint
 
-## Expanding the Oxlint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```text
+medialoom/
+├── public/
+├── src/
+│   ├── api/
+│   ├── assets/
+│   ├── components/
+│   ├── constants/
+│   ├── context/
+│   ├── pages/
+│   └── utils/
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+└── vite.config.js
+```
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/TsamoFrancis/medialoom.git
+```
+
+Move into the project:
+
+```bash
+cd medialoom
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+## Run the Application
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Vite will provide a local development URL, usually:
+
+```text
+http://localhost:5173/
+```
+
+Open that address in your browser.
+
+## Build for Production
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+## Preview the Production Build
+
+```bash
+npm run preview
+```
+
+## Author
+
+**TsamoFrancis**
+
+GitHub: https://github.com/TsamoFrancis
+
+## License
+
+This project is for educational and development purposes.
