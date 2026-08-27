@@ -1,0 +1,40 @@
+.star-rating {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.star-rating__star {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  transition: transform 0.12s ease;
+}
+
+.star-rating__star:not(:disabled):hover {
+  transform: scale(1.12);
+}
+
+.star-rating__star:disabled {
+  cursor: default;
+  color: var(--star-gold);
+}
+
+.star-rating__star:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star-rating__star {
+    transition: none;
+  }
+  .star-rating__star:not(:disabled):hover {
+    transform: none;
+  }
+}

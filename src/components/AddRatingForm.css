@@ -1,0 +1,183 @@
+.rating-form__header h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.rating-form__header p {
+  margin: 0 0 28px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.rating-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.rating-form__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.rating-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Shared field chrome ------------------------------------------------ */
+
+.rating-form input[type='text'],
+.rating-form input[type='date'],
+.rating-form textarea {
+  width: 100%;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: inherit;
+  padding: 11px 14px;
+  transition: border-color 0.15s ease;
+}
+
+.rating-form textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+.rating-form input::placeholder,
+.rating-form textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.rating-form input:focus,
+.rating-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.rating-form input:focus-visible,
+.rating-form textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.rating-form .has-error {
+  border-color: var(--danger);
+}
+
+.field-error {
+  font-size: 12px;
+  color: var(--danger);
+}
+
+/* Type selector -------------------------------------------------------- */
+
+.type-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.type-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.type-pill:hover {
+  border-color: var(--type-color);
+  color: var(--text-primary);
+}
+
+.type-pill.is-active {
+  background: var(--type-color);
+  border-color: var(--type-color);
+  color: #ffffff;
+}
+
+.type-pill:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Date field overlay ----------------------------------------------------- */
+
+.date-shell {
+  position: relative;
+}
+
+.date-shell input[type='date'] {
+  padding-right: 40px;
+}
+
+.date-shell input[type='date']::-webkit-calendar-picker-indicator {
+  position: absolute;
+  inset: 0;
+  left: auto;
+  width: 40px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.date-shell__icon {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+/* Review textarea character count ---------------------------------------- */
+
+.rating-form__field:has(textarea) {
+  position: relative;
+}
+
+.char-count {
+  position: absolute;
+  right: 14px;
+  bottom: 10px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Footer buttons ----------------------------------------------------------- */
+
+.rating-form__footer {
+  margin-top: 8px;
+}
+
+.rating-form__footer-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.form-error {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: var(--danger);
+  text-align: right;
+}
+
+@media (max-width: 520px) {
+  .rating-form__row {
+    grid-template-columns: 1fr;
+  }
+}

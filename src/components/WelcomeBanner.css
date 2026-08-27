@@ -1,0 +1,56 @@
+.welcome-banner {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, color-mix(in srgb, var(--accent) 16%, var(--bg-surface)) 0%, var(--bg-surface) 65%);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 32px 36px;
+  margin-bottom: 24px;
+}
+
+.welcome-banner::before {
+  content: '';
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 30%, transparent) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.welcome-banner h2 {
+  position: relative;
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.welcome-banner p {
+  position: relative;
+  margin: 0;
+  max-width: 480px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.welcome-banner__actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.welcome-banner__actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.welcome-banner__count {
+  font-size: 13px;
+  color: var(--text-muted);
+}

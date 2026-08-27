@@ -1,0 +1,59 @@
+/* ==============================
+   TOP BAR
+============================== */
+.dashboard-top-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+/* ==============================
+   SECTION LAYOUT
+============================== */
+.dashboard-section {
+  margin-bottom: 28px;
+}
+
+.dashboard-section__grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 20px;
+  align-items: start;
+}
+
+.dashboard-section__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.dashboard-section__header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.dashboard-section__header a {
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.dashboard-section__header a:hover {
+  text-decoration: underline;
+}
+
+/* ==============================
+   MOBILE
+============================== */
+@media (max-width: 900px) {
+  .dashboard-section__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-top-bar {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,38 @@
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bar-chart__row {
+  display: grid;
+  grid-template-columns: 58px 1fr 28px;
+  align-items: center;
+  gap: 12px;
+}
+
+.bar-chart__label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.bar-chart__track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--bg-surface-raised);
+  overflow: hidden;
+}
+
+.bar-chart__fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--bar-color);
+  transition: width 0.3s ease;
+}
+
+.bar-chart__value {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: right;
+}
